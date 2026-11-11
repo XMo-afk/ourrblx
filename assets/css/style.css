@@ -48,15 +48,17 @@ main{max-width:1200px;margin:auto;padding:0 6vw}.page{display:none;opacity:0;tra
 @media(max-width:560px){.album-grid{gap:12px;padding-bottom:18px}.album-grid .memory{flex-basis:78%;}.lightbox{padding:16px}.lightbox-stage{height:55vh;min-height:230px;border-radius:13px}.lightbox-content{width:94vw;gap:13px}}
 @media(prefers-reduced-motion:reduce){.lightbox,.lightbox-content,.lightbox-close{transition:none!important}}
 
-/* Custom Roblox avatars */
-.custom-avatar {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  border-radius: inherit;
-  display: block;
+
+.custom-avatar { width: 100%; height: 100%; max-width: 100%; max-height: 100%; object-fit: cover; object-position: center; display: block; border-radius: 50%; position: absolute; inset: 0; z-index: 1; }
+
+
+.avatar-card {
   position: relative;
-  z-index: 1;
+  overflow: hidden;
+}
+
+/* Make avatar image fit the circular frame */
+.avatar-card .custom-avatar {
+  border-radius: 50%;
 }
 
